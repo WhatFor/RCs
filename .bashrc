@@ -8,7 +8,8 @@ alias gfp='git fetch && git pull'
 alias gcm='git commit --amend --no-change'
 alias gc='git checkout'
 alias gcb='git checkout -b'
-alias plog='git log --pretty=format:"%s"'
+alias gr='git reset'
+alias grh='git reset --hard'
 
 # Branch shortcuts
 alias gcd='git checkout development'
