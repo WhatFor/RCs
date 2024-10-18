@@ -15,7 +15,8 @@ alias gcd='git checkout development'
 alias gcs='git checkout staging'
 alias gcm='git checkout master'
 
-alias gl='~/.githelpers && pretty_git_log'
+# Helper Functions
+alias gl='pretty_git_log'
 
 # Pretty Log
 HASH="%C(always,yellow)%h%C(always,reset)"
@@ -31,5 +32,3 @@ gl() {
   column -t -s '{' |
   less -XRS --quit-if-one-screen
 }
-
-export -f gl
