@@ -27,3 +27,10 @@ function grh {
 # Branch Shortcuts
 function gcd { git checkout development }
 function gcs { git checkout staging }
+
+# YEET
+function git-yeet {
+	param($message)
+	git add -A; git commit -m $message; git push -u origin HEAD;
+	az repos pr create --open
+}
