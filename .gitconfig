@@ -1,14 +1,56 @@
-# Configure Delta;
-#May need to install delta via a package manager: https://dandavison.github.io/delta/installation.html
 [core]
     pager = delta
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[init]
+    defaultBranch = main
+
+[tag]
+    sort = version:refname
+
+[push]
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
 [interactive]
     diffFilter = delta --color-only
+
 [delta]
     navigate = true    # use n and N to move between diff sections
-	  line-numbers = true
-	  side-by-side = true
+	line-numbers = true
+	side-by-side = true
+
 [merge]
     conflictstyle = diff3
+
 [diff]
-    colorMoved = default
+    colorMoved = plain
+    renames = true
+    mnemonicPrefix = true
+    algorithm = histogram
+
+[help]
+    autocorrect = prompt
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
